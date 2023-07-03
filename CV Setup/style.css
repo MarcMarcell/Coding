@@ -19,12 +19,13 @@ h6 {
 
 body {
     margin: 0;
+    background-color: rgba(0, 225, 255, 0.27);
 }
 
 .header {
     padding: 40px 16px;
     text-align: center;
-    background-color: #0380d3a8;
+    background-color: #0584d8a8;
 }
 
 .main {
@@ -32,3 +33,4 @@ body {
     margin: 0 auto;
     padding: 16px;
 }
+
