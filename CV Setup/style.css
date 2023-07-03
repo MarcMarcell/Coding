@@ -28,6 +28,12 @@ body {
     background-color: #0584d831;
 }
 
+a, a:hover {
+    margin: 16px
+    
+
+}
+
 .main {
     max-width: 800px;
     margin: 0 auto;
