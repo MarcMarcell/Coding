@@ -1,11 +1,10 @@
-*
-*::before,
+* *::before,
 *:after {
-    box-sizing: border-box
+  box-sizing: border-box;
 }
 
 * {
-    font-family: 'Alegreya', serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 h1,
@@ -14,29 +13,45 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Zilla Slab', serif;
+  font-family: "Zilla Slab", serif;
 }
 
 body {
-    margin: 0;
-    background-color: rgba(0, 225, 255, 0.237);
+  margin: 0;
+  background-color: rgba(0, 225, 255, 0.237);
 }
 
 .header {
-    padding: 40px 16px;
-    text-align: center;
-    background-color: #0584d831;
+  padding: 40px 16px;
+  text-align: center;
+  background-color: #0584d831;
 }
 
-a, a:hover {
-    margin: 16px
-    
+a {
+  margin: 16px;
+  text-decoration: none;
+}
 
+a:link {
+  color: black;
+  transition: color 0.5s, font-size 0.5s;
+}
+
+a:visited {
+  color: rgb(183, 0, 0);
+}
+
+a:hover {
+  color: rgb(149, 176, 0);
+  font-size: 16px;
+}
+
+a:active {
+  color: currentColor;
 }
 
 .main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px;
 }
-
