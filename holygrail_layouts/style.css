@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,600&family=Signika+Negative&display=swap');
+
+/* Universal Selector */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --divsBG: rgb(236, 242, 255);
+    --c1: #ff00a6; /* sehr hell */
+    --c2: #3700ed;
+    --c3: #0025de;
+    --c4: #0643b4;
+    --c5: #000a58;
+    --c6: #1B2631; /* sehr dunkel */
+}
+
+.el {
+    background: var(--divsBG);
+    font-family: 'Crimson Text', serif;
+}
+
+/*! MediaQuery for different devices width, that will be discovered due to the fact that the internet browser, knows the geometry of your screen*/
+/*! MediaQuery für unterschiedliche Gerätebreiten, die aufgrund der Tatsache ermittelt werden, dass der Internet-Browser die Geometrie Ihres Bildschirms kennt*/
+
+
+/*Laptops*/
+@media screen and (min-width: 1025px) {
+    .body {
+        /*background: red; */
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+    }
+
+    .NavBar {
+        grid-column: 1 / span 12;
+        grid-row: 1 / span 1;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .NavUL {
+        display: flex;
+        gap: 30px;
+        list-style: none;
+    }
+
+    .Footer {
+        grid-column: 1 / span 12;
+        grid-row: 12 / span 1;
+        text-align: center;
+    }
+
+    .LeftPanel {
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 10;
+    }
+
+    .RightPanel {
+        grid-column: 11 / span 2;
+        grid-row: 2 / span 10;
+    }
+
+    .Content {
+        grid-column: 3 / span 8;
+        grid-row: 2 / span 10;
+        background: radial-gradient(ellipse, var(--c1), var(--c2), var(--c3)),
+            radial-gradient(ellipse at top, var(--c4), var(--c5), var(--c6));
+        background-size: 400% 400%;
+        -webkit-animation: prettyAnimatedGradient 30s ease-in-out infinite;
+    }
+
+    @-webkit-keyframes prettyAnimatedGradient {
+        0% {
+            background-position: 100% 100%;
+        }
+
+        50% {
+            background-position: 0% 0%;
+        }
+
+        100% {
+            background-position: 100% 100%;
+        }
+    }
+}
+
+/*Tablets*/
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .body {
+        /*background: red; */
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+    }
+
+    .NavBar {
+        grid-column: 1 / span 12;
+        grid-row: 1 / span 1;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .NavUL {
+        display: flex;
+        gap: 30px;
+        list-style: none;
+    }
+
+    .Footer {
+        grid-column: 1 / span 12;
+        grid-row: 12 / span 1;
+        text-align: center;
+    }
+
+    .LeftPanel {
+        grid-column: 1 / span 3;
+        grid-row: 2 / span 10;
+    }
+
+    .RightPanel {
+        grid-column: 10 / span 3;
+        grid-row: 2 / span 10;
+    }
+
+    .Content {
+        grid-column: 4 / span 6;
+        grid-row: 2 / span 10;
+        background: radial-gradient(ellipse, var(--c1), var(--c2), var(--c3)),
+            radial-gradient(ellipse at top, var(--c4), var(--c5), var(--c6));
+        background-size: 400% 400%;
+        -webkit-animation: prettyAnimatedGradient 30s ease-in-out infinite;
+    }
+
+    @-webkit-keyframes prettyAnimatedGradient {
+        0% {
+            background-position: 100% 100%;
+        }
+
+        50% {
+            background-position: 0% 0%;
+        }
+
+        100% {
+            background-position: 100% 100%;
+        }
+    }
+}
+
+/*Smart Phones*/
+@media screen and (max-width: 768px) {
+    .body {
+        /*background: red; */
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+    }
+
+    .NavBar {
+        grid-column: 1 / span 12;
+        grid-row: 1 / span 1;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .NavUL {
+        display: flex;
+        gap: 30px;
+        list-style: none;
+    }
+
+    .Footer {
+        grid-column: 1 / span 12;
+        grid-row: 12 / span 1;
+        text-align: center;
+    }
+
+    .LeftPanel {
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 5;
+    }
+
+    .RightPanel {
+        grid-column: 1 / span 2;
+        grid-row: 7 / span 5;
+    }
+
+    .Content {
+        grid-column: 3 / span 10;
+        grid-row: 2 / span 10;
+        background: radial-gradient(ellipse, var(--c1), var(--c2), var(--c3)),
+            radial-gradient(ellipse at top, var(--c4), var(--c5), var(--c6));
+        background-size: 400% 400%;
+        -webkit-animation: prettyAnimatedGradient 30s ease-in-out infinite;
+    }
+
+    @-webkit-keyframes prettyAnimatedGradient {
+        0% {
+            background-position: 100% 100%;
+        }
+
+        50% {
+            background-position: 0% 0%;
+        }
+
+        100% {
+            background-position: 100% 100%;
+        }
+    }
+}
