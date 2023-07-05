@@ -1,15 +1,29 @@
-@font-face {
-    font-family: "OpenSans-Bold";
-    src: url("../fonts/OpenSans-Bold.ttf") format("truetype");
-    font-style: bold;
+*{
+    box-sizing: border-box;
 }
 
-@font-face {
-    font-family: "OpenSans-Regular";
-    src: url("../fonts/OpenSans-Regular.ttf")format("truetype");
-    font-style:  normal;
+html {
+    font-family: 'Open Sans', sans-serif;
 }
 
-body {
-    font-family: "OpenSans-Bold";
+h1, h2{
+        font-family: 'Lobster', cursive;
+}
+
+body{
+    margin: 0;
+}
+
+header {
+    padding: 40px 16px;
+    text-align: center;
+}
+
+a{
+    margin: 4px;
+    text-decoration: none;
+}
+
+main {
+    padding: 16px;
 }
