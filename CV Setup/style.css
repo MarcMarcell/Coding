@@ -21,10 +21,28 @@ body {
   background-color: rgba(0, 225, 255, 0.237);
 }
 
+*::selection {
+  background-color: rgb(59, 225, 178);
+}
+
 .header {
-  padding: 40px 16px;
+  padding: 48px 16px;
   text-align: center;
   background-color: #0584d831;
+}
+
+.profession::after {
+  content: " 👨‍🎓";
+}
+
+aside {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  padding: 8px;
+  border-radius: 4px;
+  background: darkblue;
+  color: white;
 }
 
 a {
@@ -33,6 +51,7 @@ a {
 }
 
 a:link {
+  padding: 4px 8px;;
   color: black;
   transition: color 0.5s, font-size 0.5s;
 }
@@ -42,7 +61,7 @@ a:visited {
 }
 
 a:hover {
-  color: rgb(149, 176, 0);
+  color: rgb(84, 169, 0);
   font-size: 16px;
 }
 
@@ -50,8 +69,38 @@ a:active {
   color: currentColor;
 }
 
+a + a {
+  margin-left: 16px;
+}
+
 .main {
   max-width: 800px;
   margin: 0 auto;
   padding: 16px;
 }
+
+.main > * + * {
+  margin-top: 48px;
+}
+
+.main > * {
+  border-top: 2px solid black;
+}
+
+.main > *:first-child {
+  border-top: none;
+}
+
+h2 {
+  position: relative;
+  left: -16px;
+}
+
+.experience-heading {
+  display: inline-block;
+}
+
+.experience-subheading {
+  display: inline-block;
+}
+

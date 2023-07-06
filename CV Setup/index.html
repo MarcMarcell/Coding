@@ -1,82 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta name="autor" content="Marc">
-    <meta name="description" content="Marc's CV">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Zilla+Slab:wght@700&display=swap" rel="stylesheet">
+  <head>
+    <meta name="autor" content="Marc" />
+    <meta name="description" content="Marc's CV" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/normalize.css@8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Zilla+Slab:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <title>my-cv-setup</title>
-</head>
-<body>
+  </head>
+
+  <body>
     <header class="header">
-        <h1>Marc-Marcell Künstler</h1>
-        <p>Trainee for Web Developer</p>
-        <nav>
-            <a href="#profile">Profile</a>
-            <a href="#experience">Experience</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-        </nav>
+      <h1>Marc-Marcell Künstler</h1>
+      <p class="profession">Trainee for Web Developer</p>
+      <nav>
+        <a href="#profile">Profile</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <aside>Hire me</aside>
     </header>
     <main class="main">
-        <article id="profile">
-            <h2>Profile</h2>
-            <p>Hello my name is Marc i am a Trainee for Web Development, <i>i think this is very interesting to learn and i have a lot of fun to do that</i>
-            </p>
-        </article>
-        <article id="experience">
-            <h2>Experience</h2>
-            <section>
-                <header>
-            <h3>Call Center Agent for Vodafone</h3>
-            <p>2021 - 2022</p>
-            </header>
-            <p>it was a nice job but i cant do that for a long time because it was boring.
-            </p>
-            </section>
-            <section>
-                <header>
-                <h3>Call Center Agent for Telecom</h3>
-                <p>2020 - 2021</p>
-                </header>
-                <p>i cant say something about that bacause it was in 2020 ^^
-                </p>
-            </section>
-        </article>
-        <article id="skills">
-            <h2>Skills</h2>
-            <section>
-                <h3>Soft Skills</h3>
-                <ul>
-                    <li>Communication</li>
-                    <li>Teamwork</li>
-                    <li>Empathy</li>
-                </ul>
-            </section>
-            <section>
-                <h3>Hard Skills</h3>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                </ul>
-            </section>
-        </article>
-        <article id="contact">
-            <h2>Contact</h2>
-            <ol>
-                <li>Phone: +49 179 4658825
-                </li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/marc-marcell-künstler-90738a273">https://www.linkedin.com/in/marc-marcell kuenstler</a>
-                </li>
-                <li>GitHub: <a href="https://github.com/MarcMarcell">https://github.com/Marc-Marcell-Kuenstler</a>
-                </li>
-            </ol>
-        </article>
+      <article id="profile">
+        <h2>Profile</h2>
+        <p>
+          Hello my name is Marc i am a Trainee for Web Development,
+          <i
+            >i think this is very interesting to learn and i have a lot of fun
+            to do that</i
+          >
+        </p>
+      </article>
+      <article id="experience">
+        <h2>Experience</h2>
+        <section>
+          <header>
+            <h3 class="experience-heading">Call Center Agent for Vodafone</h3>
+            <p class="experience-subheading">2021 - 2022</p>
+          </header>
+          <p>
+            it was a nice job but i cant do that for a long time because it was
+            boring.
+          </p>
+        </section>
+        <section>
+          <header>
+            <h3 class="experience-heading">Call Center Agent for Telecom</h3>
+            <p class="experience-subheading">2020 - 2021</p>
+          </header>
+          <p>i cant say something about that bacause it was in 2020 ^^</p>
+        </section>
+      </article>
+      <article id="skills">
+        <h2>Skills</h2>
+        <section>
+          <h3>Soft Skills</h3>
+          <ul>
+            <li>Communication</li>
+            <li>Teamwork</li>
+            <li>Empathy</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Hard Skills</h3>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+        </section>
+      </article>
+      <article id="contact">
+        <h2>Contact</h2>
+        <ol>
+          <li>Phone: +49 179 4658825</li>
+          <li>
+            LinkedIn:
+            <a
+              href="https://www.linkedin.com/in/marc-marcell-künstler-90738a273"
+              >https://www.linkedin.com/in/marc-marcell kuenstler</a
+            >
+          </li>
+          <li>
+            GitHub:
+            <a href="https://github.com/MarcMarcell"
+              >https://github.com/Marc-Marcell-Kuenstler</a
+            >
+          </li>
+        </ol>
+      </article>
     </main>
-</body>
+  </body>
 </html>
