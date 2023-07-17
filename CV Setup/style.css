@@ -1,4 +1,5 @@
-* *::before,
+*,
+*:before,
 *:after {
   box-sizing: border-box;
 }
@@ -6,6 +7,18 @@
 html {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 20px;
+  }
 }
 
 h1,
@@ -18,20 +31,40 @@ h6 {
 }
 
 body {
-  margin: 0;
-  background-color: rgba(0, 225, 255, 0.237);
+--background-color: rgba(49, 231, 247, 0.338);
+--text-color: black;
+--accent-color: rgba(0, 21, 255, 0.582);
+--accent-text-color: black;
+--nav-link-active-bg-color: rgb(255, 255, 255);
+
+margin: 0;
+background-color: var(--background-color);
+color: var(--text-color);
 }
 
 *::selection {
-  background-color: rgb(59, 225, 178);
+  background-color: var(--accent-color);
+}
+
+a,
+a:link,
+a:hover,
+a:visited,
+a:active {
+  color: var(--text-color);
 }
 
 .header {
   padding: 3rem 1rem;
-  padding-top: 4.5em;
+  padding-top: 4.5rem;
   text-align: center;
-  background-color: #0584d831;
+  background-image: linear-gradient(
+    235deg,
+    var(--background-color),
+    var(--accent-color)
+  );
   position: relative;
+  color: var(--accent-text-color);
 }
 
 .heading-group {
@@ -47,45 +80,86 @@ body {
 }
 
 .profession::after {
-  content: " 👨‍🎓";
+  content: "👨‍🎓";
 }
 
-aside {
+.hire-me {
   position: absolute;
   right: 1rem;
   top: 1rem;
   padding: 0.5rem;
   border-radius: 0.25rem;
-  background: darkblue;
-  color: white;
+  opacity: 0.5;
+  background: var(--accent-color);
+  transform-origin: top right;
+  transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
 }
 
-a {
-  margin: 16px;
-  text-decoration: none;
+.header:hover .hire-me,
+.header:focus-within .hire-me {
+  opacity: 1;
+  transform: scale(1.5);
 }
 
-a:link {
-  padding: 0.25rem 0.5rem;;
-  color: black;
-  transition: color 0.5s, font-size 0.5s;
+@media screen and (min-width: 992px) {
+  .hire-me {
+    position: fixed;
+  }
 }
 
-a:visited {
-  color: rgb(183, 0, 0);
+@media print {
+  .hire-me {
+    display: none;
+  }
+
+  .nav {
+    display: none;
+  }
 }
 
-a:hover {
-  color: rgb(84, 169, 0);
-  font-size: 16px;
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-a:active {
-  color: currentColor;
+@meida screen and (min-width: 768px) {
+  .nav {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
-a + a {
-  margin-left: 1rem;
+.nav-link {
+  padding: 0.25rem 0.5rem;
+  color: var(--accent-text-color);
+  transition: background-color 0.25s ease-in-out; 
+}
+
+.nav-link:hover {
+  background-color: var(--accent-color);
+  color: var(--accent-text-color);
+}
+
+.nav-link:active {
+  background-color: var(--nav-link-active-bg-color);
+  color: var(--accent-text-color);
+}
+
+.nav-link:visited {
+  color: var(--accent-text-color);
+}
+
+.nav-link:focus {
+  background-color: var(--accent-color);
+  outline-color: var(--accent-text-color);
+  outline-style: dotted;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-link + .nav-link {
+    margin-left: 1rem;
+  }
 }
 
 .main {
@@ -94,29 +168,77 @@ a + a {
   padding: 1rem;
 }
 
+@media screen and (min-width: 768px) {
+  .main {
+    max-width: 80ch;
+  }
+}
+
 .main > * + * {
   margin-top: 3rem;
 }
 
-.main > * {
-  border-top: 0.125rem solid black;
-  padding: 0 1rem;
+@media screen and (min-width: 768px) {
+  .main > * + * {
+    margin-top: 8rem;
+  }
 }
 
 .main > *:first-child {
   border-top: none;
 }
 
-h2 {
+.main-article {
+  border-top: 0.125rem solid var(--accent-color);
+  padding: 0 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .main-article {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+  }
+
+  .main-article-content {
+    margin-top: 4rem;
+  }
+}
+
+.main-article-heading {
   position: relative;
   left: -1rem;
 }
 
-.experience-heading {
-  display: inline-block;
+.experience-header {
+  display: flex;
+  flex-direction: column;
 }
 
-.experience-subheading {
-  display: inline-block;
+@media screen and (min-width:768px) {
+  .experience-header {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
 }
 
+.footer {
+  margin-top: 3rem;
+  background-color: var(--accent-color);
+  color: var(--accent-text-color);
+  padding: 2rem;
+}
+
+.footer {
+  text-align: center;
+  margin: 0;
+}
+
+.footer-link,
+.footer-link:link,
+.footer-link:hover,
+.footer-link:active,
+.footer-link:visited {
+  color: var(--accent-text-color);
+}

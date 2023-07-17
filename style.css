@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.task {
+    position: relative
+}
+
+.sr-only {
+    font-size: 0;
+
+    position: absolute;
+    top: -1000%
+}
+
+
+#search-bar {
+    font-size: 1rem;
+    width: 100%;
+    padding-block: .5rem;
+    padding-inline: .5rem 2rem;
+    border-radius: 2rem;
+    border: 2px solid dodgerblue
+}
+
+svg {
+    fill: dodgerblue;
+    width: 1rem;
+
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%)
+}
